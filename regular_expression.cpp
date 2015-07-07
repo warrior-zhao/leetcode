@@ -27,6 +27,7 @@ public:
             expression_matched = isMatch(s, p.substr(2));
             if(char_match && !expression_matched)
             {
+                //*匹配需要匹配多个字符的情况。 如果第一个字符不匹配，*匹配只能匹配0个字符
                 expression_matched = isMatch(s.substr(1), p);
             } 
         }
